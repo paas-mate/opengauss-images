@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Save
-        run: docker pull enmotech/opengauss:3.1.0; docker save enmotech/opengauss:3.1.0 -o gauss.tar.gz
+        run: docker pull opengauss/opengauss:3.1.0; docker save opengauss/opengauss:3.1.0 -o gauss.tar.gz
       - uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
           delete_release: true
